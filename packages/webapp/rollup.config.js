@@ -4,7 +4,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import serve from 'rollup-plugin-serve';
 import { terser } from 'rollup-plugin-terser';
- import svelteConfig from './svelte.config';
+import svelteConfig from './svelte.config';
+import typescript from '@rollup/plugin-typescript';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -22,7 +23,6 @@ export default {
 			dev: !production,
 			...svelteConfig
 		}),
-
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
 		// some cases you'll need additional configuration —
@@ -32,7 +32,15 @@ export default {
 			browser: true,
 			dedupe: ['svelte']
 		}),
-		commonjs(),
+		commonjs({
+			namedExports: {
+				// left-hand side can be an absolute path, a path
+				// relative to the current directory, or the name
+				// of a module in node_modules
+				'ecs-lib': ['Component', 'System', 'Entity']
+			}
+		}),
+		typescript({tsconfig: './tsconfig.json'}),
 
 		// In dev mode, serve on port 5000...
 		!production && serve({
