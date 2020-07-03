@@ -125,16 +125,16 @@ function initWebsocket() {
                     return;
                 }
                 game.helpPanel = game.ui.addPanel({ left: 'auto', top: 'auto', w: 200, h: 75 });
-                game.ui.addLabel({ text: 'D-Zone '+version, top: 5, left: 'auto', parent: game.helpPanel });
+                game.ui.addLabel({ text: 'Mittz-Zone '+version, top: 5, left: 'auto', parent: game.helpPanel });
                 game.ui.addLabel({
                     text: packageInfo.description, top: 20, left: 2, maxWidth: 196, parent: game.helpPanel
                 });
                 game.ui.addLabel({
-                    text: ':icon-npm: View on npm', hyperlink: 'https://www.npmjs.com/package/d-zone',
+                    text: ':icon-npm: Developer homepage', hyperlink: 'https://mittens.glitch.me',
                     top: 50, left: 8, parent: game.helpPanel
                 });
                 game.ui.addLabel({
-                    text: ':icon-github: View on GitHub', hyperlink: 'https://github.com/vegeta897/d-zone',
+                    text: ':icon-github: View on GitHub', hyperlink: 'https://github.com/orago/mittz-zone',
                     top: 50, right: 8, parent: game.helpPanel
                 });
             }});
