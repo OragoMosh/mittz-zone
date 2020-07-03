@@ -130,7 +130,7 @@ function initWebsocket() {
                     text: packageInfo.description, top: 20, left: 2, maxWidth: 196, parent: game.helpPanel
                 });
                 game.ui.addLabel({
-                    text: ':icon-npm: Developer homepage', hyperlink: 'https://mittens.glitch.me',
+                    text: ':icon-npm: Homepage', hyperlink: 'https://mittens.glitch.me',
                     top: 50, left: 8, parent: game.helpPanel
                 });
                 game.ui.addLabel({
