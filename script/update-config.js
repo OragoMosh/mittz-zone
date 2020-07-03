@@ -1,9 +1,8 @@
 'use strict';
 /*
 
-    D-Zone Configuration Updater
-    Made by JacobGunther12 (@JacobGunther12#1281)
-    Rewritten by Vegeta897
+    Mittz-Zone Configuration Updater
+    Made by Orago (@Orago#7414)
 
     Automatically updates the discord-config.json file to
     include all servers the bot has access to
